@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('build') {
+            steps {
+                echo 'build'
+            }
+        }
+        stage('run a command') {
+            steps {
+                bat 'whoami'
+            }
+        }
+        stage('deploy on test') {
+            steps {
+                echo 'deploy on test'
+            }
+        }
+        stage('deploy on prod') {
+            steps {
+                echo 'deploy on prod'
+            }
+        }
+    }
+}
